@@ -25,15 +25,15 @@
                 },
                 {
                     "name": "comment.line.m64k.gnu",
-                    "match": "^\\s*[*#].*$"
+                    "match": "(\/\/)(.+?)(?=[\n\r]|\\*\\))"
                 }
             ]
         },
         "strings":
         {
             "name": "string.quoted.double.m64k.gnu",
-            "begin": "\"",
-            "end": "\"",
+            "begin": "\"|<",
+            "end": "\"|>",
             "patterns":
             [
                 {
@@ -92,6 +92,10 @@
                 {
                     "name": "keyword.control.m68k.gnu",
                     "match": "\\B(?i)\\.string(8|16|32|64)?\\b"
+                },
+                {
+                    "name": "keyword.control.m68k.gnu",
+                    "match": "\\B(?i)\\#(include|define|if|ifdef|undef|ifndef|else|elif|endif|error)\\b"
                 }
             ]
         },
